@@ -1,0 +1,24 @@
+// Spacers
+$spacer: 2rem;
+
+// Typography
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@700&family=Montserrat:wght@700&family=Space+Mono:wght@400;700&display=swap');
+
+$font-family-base: 'Space Mono';
+$display-font-sizes: (
+    1: 4rem,
+    2: 3.5rem,
+    3: 3rem,
+    4: 2.5rem,
+    5: 2rem,
+    6: 1.5rem
+);
+
+// Bootstrap
+@import '../node_modules/bootstrap/scss/bootstrap';
+
+h1 {
+    font-family: 'Inconsolata';
+    font-family: Inconsolata;
+    letter-spacing: -0.08em;
+}
