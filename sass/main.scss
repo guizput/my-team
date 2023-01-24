@@ -1,10 +1,12 @@
+@import 'breakpoints';
+
 // Spacers
 $spacer: 2rem;
 
 // Typography
-@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@700&family=Montserrat:wght@700&family=Space+Mono:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@700&family=Montserrat:wght@700&family=PT+Serif:wght@700&family=Poppins:wght@400;600&display=swap');
 
-$font-family-base: 'Space Mono';
+$font-family-base: 'Poppins';
 $display-font-sizes: (
     1: 4rem,
     2: 3.5rem,
@@ -18,7 +20,44 @@ $display-font-sizes: (
 @import '../node_modules/bootstrap/scss/bootstrap';
 
 h1 {
-    font-family: 'Inconsolata';
-    font-family: Inconsolata;
-    letter-spacing: -0.08em;
+    font-family: PT Serif;
+    font-weight: 700;
+    letter-spacing: -0.045em;
+
+}
+h5 {
+    font-weight: 600;
+}
+
+// Special styling
+.team {
+    > div:nth-child(even){
+        transform: translateY(15%);
+        @include breakpoint('screen-md'){
+            transform: translateY(0);
+        }
+    }
+    > div:nth-child(2), > div:nth-child(5){
+        @include breakpoint('screen-md'){
+            transform: translateY(15%);
+        }
+    }
+
+}
+.card {
+    @include breakpoint('screen-md'){
+        max-width: 150px;
+    }
+    @include breakpoint('screen-lg'){
+        max-width: 200px;
+    }
+    @include breakpoint('screen-xl'){
+        max-width: 300px;
+    }
+    &-job {
+        right: -20px;
+        top: 0;
+        transform: translateX(100%) rotate(90deg);
+        transform-origin: top left;
+    }
 }
